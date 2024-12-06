@@ -70,25 +70,21 @@
     }
 </style>
 <script>
-    // 获取所有具有 "sc-1wag0ht-5" 类名的元素
     const elements = document.querySelectorAll('.sc-1wag0ht-5');
-    // 为每个元素绑定点击事件
     elements.forEach(element => {
         element.addEventListener('click', function() {
-            openFullscreen();
+            openFullscreenx();
         });
     });
-    // 进入全屏模式的函数
-    function openFullscreen() {
+    function openFullscreenx() {
         var iframe = document.getElementById("game-element");
-        // 尝试进入全屏模式
         if (iframe.requestFullscreen) {
-            iframe.requestFullscreen(); // 标准浏览器 API
-        } else if (iframe.mozRequestFullScreen) { // Firefox
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) {
             iframe.mozRequestFullScreen();
-        } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari 和 Opera
+        } else if (iframe.webkitRequestFullscreen) {
             iframe.webkitRequestFullscreen();
-        } else if (iframe.msRequestFullscreen) { // IE/Edge
+        } else if (iframe.msRequestFullscreen) {
             iframe.msRequestFullscreen();
         }
     }
